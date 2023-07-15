@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --font-color-black: #000;
+  --font-color-blue: #34355B;
+  --font-color-white: #FFF;
+  --bg-main: #FFF;
+  --bg-button: #FF9500;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  background: linear-gradient(45deg, #190361 0%, #BB00FF 100%);
+  background-position: 0px 0px;
+  background-size: 200% 200%;
+  background-repeat: repeat-y;
+  height: 100vh;
+  font-size: 1.6rem;
+  animation: background-movement 10s ease infinite; 
+}
+
+main {
+  display: flex;
+  width: 42.8rem;
+  max-height: 56.4rem;
+  padding: 4.8rem 6.4rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: -12rem;
+  border-radius: .5rem;
+  background: var(--bg-main);
+  box-shadow: 0rem 2.0rem 5.0rem 0rem rgba(0, 0, 0, 0.80);
+}
+
+
+.hide {
+  display: none;
+}
+
+.screen1 h1, .screen2 h2 {
+  color: var(--font-color-blue);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.screen1 p, button {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.screen1 p {
+  color: var(--font-color-blue);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 1.4rem;
+  margin-bottom: 2.0rem;
+}
+
+.screen1 img:hover {
+  animation: shaking 400ms infinite;
+  cursor: pointer;
+}
+
+.screen2 div {
+  width: 29.3rem;
+  background: #E4EDF1;
+  box-shadow: .2rem .2rem .2rem 0rem rgba(85, 85, 85, 0.50);
+  padding: 1.0rem;
+  margin: 1.7rem 0;
+  animation: moveUp 2s;
+}
+
+.screen2 div p {
+  color: var(--font-color-black);
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.screen2 button {
+  width: 17.4rem;
+  height: 5.2rem;
+  color: var(--font-color-white);
+  text-align: center;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+  border-radius: .4rem;
+  background: var(--bg-button);
+  transition: background 200ms;
+  margin-top: 1.7rem;
+}
+
+.screen2 button:hover {
+  background: #da7f01;
+  cursor: pointer;
+}
+
+@keyframes shaking {
+  0% { transform: translate(.1rem, .1rem) rotate(0deg); }
+  10% { transform: translate(-.1rem, -.2rem) rotate(-1deg); }
+  20% { transform: translate(-.3rem, 0rem) rotate(1deg); }
+  30% { transform: translate(.3rem, .2rem) rotate(0deg); }
+  40% { transform: translate(.1rem, -.1rem) rotate(1deg); }
+  50% { transform: translate(-.1rem, .2rem) rotate(-1deg); }
+  60% { transform: translate(-.3rem, .1rem) rotate(0deg); }
+  70% { transform: translate(.3rem, .1rem) rotate(-1deg); }
+  80% { transform: translate(-.1rem, -.1rem) rotate(1deg); }
+  90% { transform: translate(.1rem, .2rem) rotate(0deg); }
+  100% { transform: translate(.1rem, -.2rem) rotate(-1deg); }
+}
+
+@keyframes moveUp {
+  from {
+    transform: translate(0rem, 17.4rem) scale(0);
+  }
+}
+
+@keyframes background-movement {
+0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
